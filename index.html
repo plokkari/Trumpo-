@@ -73,9 +73,10 @@
         }
 
         .gif-box img {
-            max-width: 100%; /* Ensure the image scales properly */
-            height: auto;
-        }
+    width: 100%;
+    height: 100%; /* Ensure the image takes up the entire box */
+    object-fit: cover; /* This will ensure the image covers the box without stretching */
+}
 
         .gif-box::after {
             content: '';
