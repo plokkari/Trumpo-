@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where is Trumpo?</title>
+    <title>Where is Trump?</title>
     <style>
         :root {
             --usa-red: #B31942;
@@ -53,10 +53,9 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
-            padding-bottom: 100px; /* Space for social media */
+            padding-bottom: 100px;
         }
 
-        /* GIF Box */
         .gif-box {
             width: 100%;
             height: auto;
@@ -78,10 +77,6 @@
             object-fit: contain;
         }
 
-        .gif-box span {
-            display: none; /* Hide the text inside the gif-box */
-        }
-
         .gif-box::after {
             content: '';
             position: absolute;
@@ -95,7 +90,6 @@
             pointer-events: none;
         }
 
-        /* Link Box */
         .link-box {
             width: 100%;
             padding: 20px;
@@ -119,7 +113,6 @@
             transform: translateY(-2px);
         }
 
-        /* Image Slider */
         .slider-container {
             width: 100%;
             position: relative;
@@ -178,7 +171,6 @@
         .prev-btn { left: 10px; }
         .next-btn { right: 10px; }
 
-        /* Social Media Footer */
         .social-footer {
             position: fixed;
             bottom: 0;
@@ -214,46 +206,29 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .social-box::before {
-            content: none; /* Remove the white box */
-        }
-
         .social-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .social-box span {
-            position: relative;
-            z-index: 2;
-            color: var(--usa-blue);
-        }
-
-        /* Placeholder styling */
-        .placeholder {
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
+        .social-box a {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- GIF Box -->
         <div class="gif-box">
-            <img src="Pic/trumpo.gif" alt="GIF Area">
-            <span>GIF Area</span>
+            <img src="Pic/trumpo.gif" alt="Trump GIF">
         </div>
 
-        <!-- Link Box -->
         <div class="link-box" onclick="copyLink()">
-            CA: coming soon!
+            Where is Trump?
         </div>
 
-        <!-- Image Slider -->
         <div class="slider-container">
             <div class="slider-window">
                 <div class="slider-content">
@@ -268,27 +243,25 @@
         </div>
     </div>
 
-    <!-- Social Media Footer -->
     <div class="social-footer">
-    <div class="social-box">
-        <a href="https://x.com/whereistrumpo?s=21" target="_blank">
-            <img src="Pic/IMG_0558.jpeg" alt="Social 1">
-        </a>
+        <div class="social-box">
+            <a href="https://x.com/whereistrumpo?s=21" target="_blank">
+                <img src="Pic/IMG_0558.jpeg" alt="Social 1">
+            </a>
+        </div>
+        <div class="social-box">
+            <a href="https://t.me/whereistrumpo" target="_blank">
+                <img src="Pic/IMG_0560.jpeg" alt="Social 2">
+            </a>
+        </div>
+        <div class="social-box">
+            <a href="https://link-to-social3.com" target="_blank">
+                <img src="Pic/IMG_0561.jpeg" alt="Social 3">
+            </a>
+        </div>
     </div>
-    <div class="social-box">
-        <a href="https://t.me/whereistrumpo" target="_blank">
-            <img src="Pic/IMG_0560.jpeg" alt="Social 2">
-        </a>
-    </div>
-    <div class="social-box">
-        <a href="https://link-to-social3.com" target="_blank">
-            <img src="Pic/IMG_0561.jpeg" alt="Social 3">
-        </a>
-    </div>
-</div>
 
     <script>
-        // Copy link functionality
         function copyLink() {
             const link = "YOUR_LINK_HERE";
             navigator.clipboard.writeText(link)
@@ -296,7 +269,6 @@
                 .catch(err => console.error('Failed to copy:', err));
         }
 
-        // Slider functionality
         let currentSlide = 0;
         const slider = document.querySelector('.slider-content');
         const slides = document.querySelectorAll('.slider-image');
